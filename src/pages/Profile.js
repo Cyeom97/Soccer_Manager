@@ -45,7 +45,7 @@ const Profile = ({ user, authenticated }) => {
   addPoints()
 
   return user && authenticated ? (
-    <div className="body">
+    <div className="homePage">
       <h1>My Team</h1>
       <h2>My Points: {myPoints}</h2>
       <div className="pitch">
