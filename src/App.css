@@ -183,6 +183,11 @@ img{
 
 
 
+.headers{
+  display: flex;
+  justify-content: center;
+}
+
 .pitch {
   background: repeating-linear-gradient(
 		rgba(255, 255, 255, 0.05),
@@ -350,9 +355,14 @@ img{
   font-family: 'Jost', sans-serif;
 }
 
+.createTeam{
+  margin: auto;
+}
+
 .playerList{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 20px;
 }
 
 .empty{

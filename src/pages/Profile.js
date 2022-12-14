@@ -46,8 +46,10 @@ const Profile = ({ user, authenticated }) => {
 
   return user && authenticated ? (
     <div className="profilePage">
-      <h1>My Team</h1>
-      <h2>My Points: {myPoints}</h2>
+      <div className="headers">
+        <h1>My Team</h1>
+        <h2>My Points: {myPoints}</h2>
+      </div>
       <div className="pitch">
         {/* <!-- the grass is green here --> */}
         <div className="lines">
@@ -105,8 +107,8 @@ const Profile = ({ user, authenticated }) => {
           </div>
         </div>
       </div>
-      {myPlayers.owner?.length < 15 ? (
-        <div>
+      {myPlayers.owner?.length < 11 ? (
+        <div class="createTeam">
           <h1>Create team</h1>
           <form>
             <label htmlFor="playerId">Player ID: </label>
