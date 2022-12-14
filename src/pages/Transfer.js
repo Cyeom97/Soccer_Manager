@@ -56,7 +56,7 @@ const Transfer = () => {
   let spending = myPlayers.money - playerBudget
 
   return (
-    <div>
+    <div class="profilePage">
       <h1>Transfers</h1>
       <h2>
         Budget: $

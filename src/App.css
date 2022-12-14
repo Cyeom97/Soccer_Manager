@@ -336,6 +336,11 @@ img{
   margin-top: -30px;
 }
 
+.profilePage{
+  background-color: #ccfeba;
+  margin-top: -30px;
+}
+
 .teams{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
