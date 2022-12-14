@@ -1,6 +1,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  font-family: 'Jost', sans-serif;
 }
 .body {
   margin: 0;
@@ -348,11 +349,19 @@ img{
 
 .teams{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 20px;
   column-gap: 100px;
   margin: 30px;
-  font-family: 'Jost', sans-serif;
+  
+}
+
+.players{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 60px;
+  margin: 30px;
 }
 
 .createTeam{

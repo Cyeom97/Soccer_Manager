@@ -15,7 +15,7 @@ const AllPlayers = () => {
 
   return (
     <div className="homepage">
-      <section className="teams">
+      <section className="players">
         {players.map((player) => (
           <div key={player.id}>
             <h2>{player.name}</h2>
