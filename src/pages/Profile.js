@@ -47,7 +47,6 @@ const Profile = ({ user, authenticated }) => {
   return user && authenticated ? (
     <div className="profilePage">
       <div className="headers">
-        <h1>My Team</h1>
         <h2>My Points: {myPoints}</h2>
       </div>
       <div className="pitch">
