@@ -32,9 +32,9 @@ const GetTeam = () => {
         <section className="team-player">
           {selectedClub?.owns.map((player) => (
             <div key={player.name}>
-              <img src={player.image}></img>
               <h2>{player.name}</h2>
               <h2>{player.position}</h2>
+              <img src={player.image}></img>
             </div>
           ))}
         </section>

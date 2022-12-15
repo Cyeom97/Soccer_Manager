@@ -25,12 +25,22 @@ const Home = () => {
 
   return (
     <div className="homepage">
+      <h1 className="homepage-title"> Welcome to Soccer Manager</h1>
+      <h2 className="homepage-sub">
+        {' '}
+        Click on a team to view details and its players
+      </h2>
+      <h2 className="homepage-sub">
+        {' '}
+        Click register to create a team or sign in!
+      </h2>
       <section className="teams">
         {teams.map((team) => (
           <div key={team.id}>
-            <h2>{team.name}</h2>
+            <h2 className="homepage-team">{team.name}</h2>
             <img
               src={team.image}
+              className="teamImage teamImage-shrink"
               alt="Team"
               onClick={() => {
                 viewTeam(team.id)
