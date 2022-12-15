@@ -60,7 +60,7 @@ const Profile = ({ user, authenticated }) => {
             {/* <!-- the top right corner --> */}
           </span>
           <div className="goalBox">{/* <!-- the goal box goes here --> */}</div>
-          <section className="goalie">
+          <section className="goalie myplayers">
             {myPlayers.owner?.map((player) =>
               player.position === 'Goalie' ? (
                 <div key={player.id}>
@@ -70,7 +70,7 @@ const Profile = ({ user, authenticated }) => {
               ) : null
             )}
           </section>
-          <section className="defenders">
+          <section className="defenders myplayers">
             {myPlayers.owner?.map((player) =>
               player.position === 'Defender' ? (
                 <div key={player.id}>
@@ -80,7 +80,7 @@ const Profile = ({ user, authenticated }) => {
               ) : null
             )}
           </section>
-          <section className="midfielders">
+          <section className="midfielders myplayers">
             {myPlayers.owner?.map((player) =>
               player.position === 'Midfielder' ? (
                 <div key={player.id}>
@@ -90,7 +90,7 @@ const Profile = ({ user, authenticated }) => {
               ) : null
             )}
           </section>
-          <section className="forwards">
+          <section className="forwards myplayers">
             {myPlayers.owner?.map((player) =>
               player.position === 'Forward' ? (
                 <div key={player.id}>

@@ -56,11 +56,12 @@ const Transfer = () => {
   let spending = myPlayers.money - playerBudget
 
   return (
-    <div class="profilePage">
-      <h1>Transfers</h1>
-      <h2>
+    <div className="profilePage">
+      <h1 className="transfer-title">Transfers</h1>
+      <h2 className="transfer-title">
         Budget: $
-        {myPlayers?.money === null ? myPlayers.money === 100 : spending}M Left
+        {myPlayers?.money === null ? (myPlayers.money += 70) : spending}M Left
+        {console.log(myPlayers.money)}
       </h2>
       <div className="pitch">
         {/* <!-- the grass is green here --> */}

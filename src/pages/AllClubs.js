@@ -20,8 +20,8 @@ const AllClubs = () => {
   }
 
   return (
-    <div>
-      <section className="teams">
+    <div className="allClubs">
+      <section className="clubSection">
         {teams.map((team) => (
           <div key={team.id}>
             <h2>{team.name}</h2>

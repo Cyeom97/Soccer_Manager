@@ -18,23 +18,27 @@ const GetTeam = () => {
   }, [id])
 
   return (
-    <div className="view-team">
-      <section>
-        <div key={selectedClub?.id}>
-          <h1>{selectedClub?.name}</h1>
-          <h2>Next Game against: {selectedClub?.schedule}</h2>
-          <img src={selectedClub?.image} alt="logo"></img>
-          <h3>Last Game results: {selectedClub?.scores}</h3>
-          <h3>Current Points: {selectedClub?.points}</h3>
-        </div>
-        {selectedClub?.owns.map((player) => (
-          <div key={player.name}>
-            <img src={player.image}></img>
-            <h2>{player.name}</h2>
-            <h2>{player.position}</h2>
+    <div className="view-teamMain">
+      <div className="view-team">
+        <section className="team-details">
+          <div key={selectedClub?.id}>
+            <img src={selectedClub?.image} alt="logo"></img>
+            <h1>{selectedClub?.name}</h1>
+            <h1>Last Game results: {selectedClub?.scores}</h1>
+            <h1>Current Points: {selectedClub?.points}</h1>
+            <h1>Next Game: {selectedClub?.schedule}</h1>
           </div>
-        ))}
-      </section>
+        </section>
+        <section className="team-player">
+          {selectedClub?.owns.map((player) => (
+            <div key={player.name}>
+              <img src={player.image}></img>
+              <h2>{player.name}</h2>
+              <h2>{player.position}</h2>
+            </div>
+          ))}
+        </section>
+      </div>
     </div>
   )
 }
