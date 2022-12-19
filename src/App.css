@@ -588,3 +588,9 @@ select {
 .team-player img{
   margin-bottom: 60px;
 }
+
+/* profile.js */
+
+.createTeam{
+  color: #2600ff;
+}

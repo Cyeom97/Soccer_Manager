@@ -61,7 +61,6 @@ const Transfer = () => {
       <h2 className="transfer-title">
         Budget: $
         {myPlayers?.money === null ? (myPlayers.money += 70) : spending}M Left
-        {console.log(myPlayers.money)}
       </h2>
       <div className="pitch">
         {/* <!-- the grass is green here --> */}
@@ -78,7 +77,11 @@ const Transfer = () => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Goalie' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="player img"
+                  ></img>
                   <h2 className="goal">{player.name}</h2>
                 </div>
               ) : (
@@ -90,7 +93,11 @@ const Transfer = () => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Defender' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="playerimg"
+                  ></img>
                   <h2 className="def">{player.name}</h2>
                 </div>
               ) : null
@@ -100,7 +107,11 @@ const Transfer = () => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Midfielder' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="player img"
+                  ></img>
                   <h2 className="mid">{player.name}</h2>
                 </div>
               ) : null
@@ -110,7 +121,11 @@ const Transfer = () => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Forward' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="player img"
+                  ></img>
                   <h2 className="for">{player.name}</h2>
                 </div>
               ) : null
@@ -127,7 +142,7 @@ const Transfer = () => {
         <select id="playerId" onChange={playerChange}>
           <option>Select Player</option>
           {myPlayers.owner?.map((footy) => (
-            <option value={footy.id}>
+            <option key={footy.id} value={footy.id}>
               {footy.name} {footy.position}
             </option>
           ))}
@@ -137,7 +152,7 @@ const Transfer = () => {
           <option>Select Player</option>
           {allPlayers?.map((player) =>
             player.price <= spending && player.name !== ownerPlayers ? (
-              <option value={player.id}>
+              <option key={player.id} value={player.id}>
                 {player.name} {player.position} ${player.price}{' '}
                 {player.selected}% {player.totalPoints}pts
               </option>

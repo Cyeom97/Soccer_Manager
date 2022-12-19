@@ -64,7 +64,11 @@ const Profile = ({ user, authenticated }) => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Goalie' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="player img"
+                  ></img>
                   <h4 className="goal">{player.name}</h4>
                 </div>
               ) : null
@@ -74,7 +78,11 @@ const Profile = ({ user, authenticated }) => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Defender' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="plyer img"
+                  ></img>
                   <h4 className="def">{player.name}</h4>
                 </div>
               ) : null
@@ -84,7 +92,11 @@ const Profile = ({ user, authenticated }) => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Midfielder' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="player img"
+                  ></img>
                   <h4 className="mid">{player.name}</h4>
                 </div>
               ) : null
@@ -94,7 +106,11 @@ const Profile = ({ user, authenticated }) => {
             {myPlayers.owner?.map((player) =>
               player.position === 'Forward' ? (
                 <div key={player.id}>
-                  <img className="playerImage" src={player.image}></img>
+                  <img
+                    className="playerImage"
+                    src={player.image}
+                    alt="player img"
+                  ></img>
                   <h4 className="for">{player.name}</h4>
                 </div>
               ) : null
@@ -107,7 +123,7 @@ const Profile = ({ user, authenticated }) => {
         </div>
       </div>
       {myPlayers.owner?.length < 11 ? (
-        <div class="createTeam">
+        <div className="createTeam">
           <h1>Create team</h1>
           <form>
             <label htmlFor="playerId">Player ID: </label>
