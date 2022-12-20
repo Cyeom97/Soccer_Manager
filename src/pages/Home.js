@@ -36,7 +36,7 @@ const Home = () => {
         {' '}
         Click register to create a team or sign in!
       </h2>
-      <section>
+      <section class="standings">
         <div className="pointsLabel">
           <h3>Team</h3>
           <h3>Standings</h3>

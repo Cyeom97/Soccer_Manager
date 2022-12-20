@@ -18,7 +18,7 @@ const AllPlayers = () => {
       <section className="players">
         {players.map((player) => (
           <div key={player.id}>
-            <h2>{player.name}</h2>
+            <h2 class="playerName">{player.name}</h2>
             <img className="allPlayers" src={player.image} alt="player"></img>
           </div>
         ))}
