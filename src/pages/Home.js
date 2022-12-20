@@ -23,6 +23,8 @@ const Home = () => {
     navigate(`teams/${id}`)
   }
 
+  teams?.sort((a, b) => b.points - a.points)
+
   return (
     <div className="homepage">
       <h1 className="homepage-title"> Welcome to Soccer Manager</h1>
@@ -34,10 +36,9 @@ const Home = () => {
         {' '}
         Click register to create a team or sign in!
       </h2>
-      <section className="teams">
+      <section>
         {teams.map((team) => (
-          <div key={team.id}>
-            <h2 className="homepage-team">{team.name}</h2>
+          <div key={team.id} className="teams">
             <img
               src={team.image}
               className="teamImage teamImage-shrink"
@@ -46,6 +47,8 @@ const Home = () => {
                 viewTeam(team.id)
               }}
             ></img>
+            <h2 className="homepage-team">{team.name}</h2>
+            <h2 className="homepage-team">{team.points}</h2>
           </div>
         ))}
       </section>
