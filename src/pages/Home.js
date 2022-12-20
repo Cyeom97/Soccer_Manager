@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const apiCall = async () => {
       let response = await axios.get(`${BASE_URL}teams`)
-      let getPlayers = await axios.get(`${BASE_URL}players`)
+      let getPlayers = await axios.get(`${BASE_URL}users`)
       setTeams(response.data)
       setPlayers(getPlayers.data)
     }

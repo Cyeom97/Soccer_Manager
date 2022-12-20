@@ -43,6 +43,7 @@ header{
 
 .back{
   color: white;
+  cursor: pointer;
 }
 
 /* Home.js */
