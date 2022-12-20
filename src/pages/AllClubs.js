@@ -27,6 +27,7 @@ const AllClubs = () => {
             <h2>{team.name}</h2>
             <img
               src={team.image}
+              className="teamImage-shrink"
               alt="Team"
               onClick={() => {
                 viewTeam(team.id)

@@ -37,6 +37,11 @@ const Home = () => {
         Click register to create a team or sign in!
       </h2>
       <section>
+        <div className="pointsLabel">
+          <h3>Team</h3>
+          <h3>Standings</h3>
+          <h3>Points</h3>
+        </div>
         {teams.map((team) => (
           <div key={team.id} className="teams">
             <img

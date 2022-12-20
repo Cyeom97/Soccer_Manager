@@ -5,25 +5,13 @@ html, body {
   background-color: #ccfeba;
 }
 
-/* for register.js and signin.js  */
-
-.body {
-  margin: 0;
-  margin-top: -30px;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-}
 
 /* nav.js  */
 
 header{
   background-color: 
   #573b8a;
+  height: 9em;
 }
 
 .links {
@@ -53,6 +41,10 @@ header{
   height: 100px;
 }
 
+.back{
+  color: white;
+}
+
 /* Home.js */
 
 .homepage{
@@ -71,19 +63,24 @@ header{
 
 .homepage-sub{
   color: #784fc5;
+  margin: 0;
 }
 
-.homepage-team{
-  color: #2600ff;
-  margin: 5px;
+.pointsLabel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .teams {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid;
+  width: 100%;
 }
 
 .teamImage{
-  cursor: pointer;
   margin: 5px;
   width: 50px;
   height: 50px;
@@ -92,6 +89,7 @@ header{
 .teamImage-shrink {
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -105,11 +103,30 @@ header{
   transform: scale(0.8);
 }
 
+.homepage-team{
+  color: #2600ff;
+  margin: 5px;
+}
 
 /* .title{
   text-align: right;
   float: right;
 } */
+
+
+/* for register.js and signin.js  */
+
+.body {
+  margin: 0;
+  margin-top: -30px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
 
 .main{
 	width: 550px;
@@ -125,6 +142,34 @@ header{
 #chk{
 	display: none;
 }
+
+.inputs{
+  width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+/* Register.js  */
+
+.labelReg{
+  color: #fff;
+	font-size: 1.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+/* Signin.js  */
 
 .signup{
 	position: relative;
@@ -143,41 +188,11 @@ header{
 	transition: .5s ease-in-out;
 }
 
-.labelReg{
-  color: #fff;
-	font-size: 1.3em;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-.inputs{
-  width: 60%;
-	height: 20px;
-	background: #e0dede;
-	justify-content: center;
-	display: flex;
-	margin: 20px auto;
-	padding: 10px;
-	border: none;
-	outline: none;
-	border-radius: 5px;
-}
-
 .link{
   text-decoration: none;
   color: white;
   display: flex;
   justify-content: center;
-}
-
-img{
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
 }
 
 .loginB{
@@ -202,7 +217,7 @@ img{
 }
 
 .admin{
-  height: 460px;
+  height: 600px;
 	background: #eee;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
@@ -215,7 +230,7 @@ img{
 }
 
 #chk:checked ~ .admin{
-	transform: translateY(-500px);
+	transform: translateY(-600px);
 }
 #chk:checked ~ .admin label{
 	transform: scale(1);	
@@ -225,10 +240,12 @@ img{
 }
 
 
+/* Profile.js  */
 
 .headers{
   display: flex;
   justify-content: center;
+  color:rgba(1, 1, 1, 0.916);
 }
 
 .pitch {
@@ -366,8 +383,6 @@ img{
   padding: 0 30px 0 30px;
 }
 
-
-
 .midfielders{
   display: flex;
   justify-content: space-around;
@@ -380,15 +395,12 @@ img{
   margin: 30px auto 15px auto;
 }
 
-.profilePage{
-  background-color: #ccfeba;
-  margin-top: -30px;
+.createTeam{
+  margin: auto;
+  color: #2600ff;
 }
 
-
-
-
-
+/* AllPlayers.js  */
 
 .players{
   display: grid;
@@ -398,9 +410,13 @@ img{
   margin: 30px;
 }
 
-.createTeam{
-  margin: auto;
+.allPlayers{
+  width: 200px; 
+  height: 200px;
 }
+
+
+/* admin.js and profile.js  */
 
 .playerList{
   display: grid;
@@ -408,14 +424,14 @@ img{
   margin-left: 20px;
 }
 
-.empty{
-  max-width: 1px; 
-}
 
+/* pickteam.js profile.js transfer.js  */
 .def{
   margin-right: 20px;
 }
 
+
+/* transfer.js profile.js  */
 .playerImage{
   width: 100px;
   height: 100px;
@@ -423,9 +439,9 @@ img{
   margin: auto;
   z-index: 2
 }
+
+/* transfer.js  */
 .box {
-  
- 
   margin: auto;
 }
 
@@ -477,6 +493,11 @@ img{
   cursor: pointer;
 }
 
+.transfer-title{
+  color: #2600ff;
+  margin-left: 40px;
+}
+
 select {
   margin: auto;
 }
@@ -489,23 +510,6 @@ select {
   border: none;
   margin: 10px;
   cursor: pointer;
-}
-
-.back{
-  color: white;
-}
-
-.allPlayers{
-  width: 200px; 
-  height: 200px;
-}
-
-.profilePage{
-  color: white;
-}
-
-.headers{
-  color:rgba(1, 1, 1, 0.916);
 }
 
 /* All Clubs.js */
@@ -526,6 +530,11 @@ select {
 .clubSection div {
   display: grid;
   justify-content: center;
+}
+
+.allClubs img {
+  width: 300px;
+  height: 300px;
 }
 
 /* team.js */
@@ -573,13 +582,6 @@ select {
   margin-top: -8px;
 }
 
-/* transfer.js */
-.transfer-title{
-  color: #2600ff;
-  margin-left: 40px;
-}
-
-/* team.js  */
 .team-player{
   color: #2600ff;
 }
@@ -592,8 +594,4 @@ select {
   margin-bottom: 60px;
 }
 
-/* profile.js */
 
-.createTeam{
-  color: #2600ff;
-}
