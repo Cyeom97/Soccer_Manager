@@ -82,23 +82,21 @@ const Transfer = () => {
                     src={player.image}
                     alt="player img"
                   ></img>
-                  <h2 className="goal">{player.name}</h2>
+                  <h4 className="goal">{player.name}</h4>
                 </div>
-              ) : (
-                <div></div>
-              )
+              ) : null
             )}
           </section>
           <section className="defenders">
             {myPlayers.owner?.map((player) =>
               player.position === 'Defender' ? (
-                <div key={player.id}>
+                <div key={player.id} className="playerCard">
                   <img
                     className="playerImage"
                     src={player.image}
                     alt="playerimg"
                   ></img>
-                  <h2 className="def">{player.name}</h2>
+                  <h4 className="def">{player.name}</h4>
                 </div>
               ) : null
             )}
@@ -106,13 +104,13 @@ const Transfer = () => {
           <section className="midfielders">
             {myPlayers.owner?.map((player) =>
               player.position === 'Midfielder' ? (
-                <div key={player.id}>
+                <div key={player.id} className="playerCard">
                   <img
                     className="playerImage"
                     src={player.image}
                     alt="player img"
                   ></img>
-                  <h2 className="mid">{player.name}</h2>
+                  <h4 className="mid">{player.name}</h4>
                 </div>
               ) : null
             )}
@@ -126,7 +124,7 @@ const Transfer = () => {
                     src={player.image}
                     alt="player img"
                   ></img>
-                  <h2 className="for">{player.name}</h2>
+                  <h4 className="for">{player.name}</h4>
                 </div>
               ) : null
             )}
