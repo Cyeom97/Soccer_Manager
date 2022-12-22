@@ -7,14 +7,11 @@ const Home = () => {
   let navigate = useNavigate()
 
   const [teams, setTeams] = useState([])
-  const [players, setPlayers] = useState([])
 
   useEffect(() => {
     const apiCall = async () => {
       let response = await axios.get(`${BASE_URL}teams`)
-      let getPlayers = await axios.get(`${BASE_URL}users`)
       setTeams(response.data)
-      setPlayers(getPlayers.data)
     }
     apiCall()
   }, [])
