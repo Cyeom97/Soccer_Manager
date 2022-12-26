@@ -25,19 +25,11 @@ const Home = () => {
   return (
     <div className="homepage">
       <h1 className="homepage-title"> Welcome to Soccer Manager</h1>
-      <h2 className="homepage-sub">
-        {' '}
-        Click on a team to view details and its players
-      </h2>
-      <h2 className="homepage-sub">
-        {' '}
-        Click register to create a team or sign in!
-      </h2>
       <section className="standings">
         <div className="pointsLabel">
-          <h3>Team</h3>
-          <h3>Standings</h3>
-          <h3>Points</h3>
+          <h3 className="standingLabel">Team</h3>
+          <h3 className="standingLabel">Standings</h3>
+          <h3 className="standingLabel">Points</h3>
         </div>
         {teams.map((team) => (
           <div key={team.id} className="teams">
