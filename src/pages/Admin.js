@@ -121,6 +121,7 @@ const Admin = ({ user, authenticated }) => {
             <img
               src={team.image}
               alt="Team"
+              className="teamImage"
               onClick={() => {
                 viewTeam(team.id)
               }}
@@ -131,6 +132,7 @@ const Admin = ({ user, authenticated }) => {
           </div>
         ))}
       </section>
+      <h1>Add Players</h1>
       <form onSubmit={playerSubmit}>
         <label htmlFor="name"> Name: </label>
         <input
