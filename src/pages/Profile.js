@@ -137,15 +137,6 @@ const Profile = ({ user, authenticated }) => {
             </select>
             <button onClick={playerAdd}>Add Player</button>
           </form>
-          <h1>Choose a playerId from this list</h1>
-          <section className="playerList">
-            {players?.map((player) => (
-              <div key={player.id}>
-                <div>{player.name}</div>
-                <div>{player.id}</div>
-              </div>
-            ))}
-          </section>
         </div>
       ) : (
         <div></div>
