@@ -71,7 +71,7 @@ const AdminPlayer = () => {
         <h2>price: {allPlayers?.price}</h2>
         <h2>selected: {allPlayers?.selected}%</h2>
         <h2>totalPoints: {allPlayers?.totalPoints}</h2>
-        <img src={allPlayers?.image} alt="player"></img>
+        <img src={allPlayers?.image} alt="player" className="playerImage"></img>
       </section>
       <form onSubmit={handleUpdate}>
         <label htmlFor="name"> Name: </label>

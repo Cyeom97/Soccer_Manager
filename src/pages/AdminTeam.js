@@ -55,7 +55,7 @@ const AdminTeam = () => {
         <div key={selectedClub.id}>
           <h1>{selectedClub.name}</h1>
           <h2>Next Game against: {selectedClub.schedule}</h2>
-          <img src={selectedClub.image} alt="logo"></img>
+          <img src={selectedClub.image} alt="logo" className="teamImage"></img>
           <h3>Last Game results: {selectedClub.scores}</h3>
           <h3>Current Points: {selectedClub.points}</h3>
         </div>
