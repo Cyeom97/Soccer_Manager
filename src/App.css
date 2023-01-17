@@ -117,6 +117,7 @@ header{
   margin: 5px;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .teamImage-shrink {
@@ -472,7 +473,7 @@ header{
 .playerImage{
   max-width: 100%;
   height: 100px;
-  
+  cursor: pointer;
   z-index: 2
 }
 
