@@ -243,6 +243,7 @@ const Admin = ({ user, authenticated }) => {
               <img
                 src={player.image}
                 alt="player"
+                className="playerImage"
                 onClick={() => {
                   viewPlayer(player.id)
                 }}
