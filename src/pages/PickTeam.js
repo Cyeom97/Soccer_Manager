@@ -19,16 +19,10 @@ const PickTeam = () => {
     <div>
       <h1>Pick Team</h1>
       <div className="pitch">
-        {/* <!-- the grass is green here --> */}
         <div className="lines">
-          {/* <!-- the outside lines of the pitch --> */}
-          <span className="corner corner-top-left">
-            {/* <!-- the top left corner --> */}
-          </span>
-          <span className="corner corner-top-right">
-            {/* <!-- the top right corner --> */}
-          </span>
-          <div className="goalBox">{/* <!-- the goal box goes here --> */}</div>
+          <span className="corner corner-top-left"></span>
+          <span className="corner corner-top-right"></span>
+          <div className="goalBox"></div>
           <section className="goalie">
             {myPlayers.owner?.map((player) =>
               player.position === 'Goalie' ? (

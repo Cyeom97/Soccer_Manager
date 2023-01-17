@@ -63,15 +63,9 @@ const Transfer = () => {
         {myPlayers?.money === null ? (myPlayers.money += 70) : spending}M Left
       </h2>
       <div className="pitch">
-        {/* <!-- the grass is green here --> */}
         <div className="lines">
-          {/* <!-- the outside lines of the pitch --> */}
-          <span className="corner corner-top-left">
-            {/* <!-- the top left corner --> */}
-          </span>
-          <span className="corner corner-top-right">
-            {/* <!-- the top right corner --> */}
-          </span>
+          <span className="corner corner-top-left"></span>
+          <span className="corner corner-top-right"></span>
           <div className="goalBox"></div>
           <section className="goalie">
             {myPlayers.owner?.map((player) =>
